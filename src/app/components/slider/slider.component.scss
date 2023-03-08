@@ -8,7 +8,8 @@
   position: relative;
 
   .slide {
-    position: relative;
+    position: absolute;
+    width: 100%;
     display: flex;
     height: 35rem;
 
@@ -55,11 +56,26 @@
         color: $lightGray;
 
         .info {
+          display: flex;
+          align-items: center;
           > span {
             &:not(:last-child):after {
               content: "|";
               margin-right: 9px;
               margin-left: 9px;
+            }
+          }
+
+          .rating {
+            display: flex;
+            align-items: center;
+            .app-icon {
+              margin-right: 5px;
+              color: #d4af37;
+            }
+
+            &-value {
+              color: $white;
             }
           }
         }
